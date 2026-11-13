@@ -4,7 +4,7 @@ export const content = {
   en: {
     nav: { home: "Home", about: "About Doctor", treatments: "Treatments", gallery: "Clinic", contact: "Contact", book: "Book an Appointment" },
     heroEyebrow: "DERMATOLOGY • SKIN • HAIR • NAILS",
-    heroTitle: "Healthy skin.\nConfidence that shows.",
+    heroTitle: "Healthy skin. Confidence that shows.",
     heroText: "Thoughtful dermatological care for your skin, hair and nail concerns — close to home in Khatima.",
     explore: "Explore treatments", doctorLabel: "CONSULTANT DERMATOLOGIST",
     introEyebrow: "PERSONALIZED DERMATOLOGICAL CARE", introTitle: "Care that begins with listening.",
@@ -31,7 +31,7 @@ export const content = {
   hi: {
     nav: { home: "होम", about: "डॉक्टर के बारे में", treatments: "उपचार", gallery: "क्लिनिक", contact: "संपर्क", book: "अपॉइंटमेंट बुक करें" },
     heroEyebrow: "त्वचा • बाल • नाखून • त्वचा रोग विशेषज्ञ",
-    heroTitle: "स्वस्थ त्वचा।\nआत्मविश्वास के साथ।",
+    heroTitle: "स्वस्थ त्वचा। आत्मविश्वास के साथ।",
     heroText: "आपकी त्वचा, बालों और नाखूनों से जुड़ी समस्याओं के लिए विशेषज्ञ परामर्श — अब खटीमा में।",
     explore: "उपचार देखें", doctorLabel: "त्वचा रोग विशेषज्ञ",
     introEyebrow: "व्यक्तिगत त्वचा संबंधी देखभाल", introTitle: "आपकी बात सुनने से शुरू होती है बेहतर देखभाल।",

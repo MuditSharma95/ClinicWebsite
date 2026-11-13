@@ -7,7 +7,7 @@ import { localizedAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Dermatology Treatments | Aruna Skin Clinic, Khatima",
-  description: "Explore skin, hair, nail and dermatology consultations with Dr. Sachin Goyal at Aruna Skin Clinic, Khatima, Uttarakhand.",\n  alternates: localizedAlternates("/treatments"),
+  description: "Explore skin, hair, nail and dermatology consultations with Dr. Sachin Goyal at Aruna Skin Clinic, Khatima, Uttarakhand.",  alternates: localizedAlternates("/treatments"),
 };
 
 export default async function TreatmentsPage({ params }: { params: Promise<{ locale: string }> }) {

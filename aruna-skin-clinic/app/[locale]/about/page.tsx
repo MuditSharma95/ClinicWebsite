@@ -6,7 +6,7 @@ import { localizedAlternates } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Dr. Sachin Goyal | Aruna Skin Clinic, Khatima",
-  description: "Meet Dr. Sachin Goyal, MBBS, MD (DVL), dermatologist at Aruna Skin Clinic, Khatima, for skin, hair and nail consultations.",\n  alternates: localizedAlternates("/about"),
+  description: "Meet Dr. Sachin Goyal, MBBS, MD (DVL), dermatologist at Aruna Skin Clinic, Khatima, for skin, hair and nail consultations.",  alternates: localizedAlternates("/about"),
 };
 
 const copy = {
