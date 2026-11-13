@@ -7,7 +7,8 @@ import { whatsappLink } from "@/lib/clinic";
 import type { Locale } from "@/lib/content";
 
 export default function PatientFeedback({ locale }: { locale: Locale }) {
-  const [active, setActive] = useState(0);\n  const [isPaused, setIsPaused] = useState(false);
+  const [active, setActive] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
   const hi = locale === "hi";
   const reviews = patientReviews;
   const count = reviews.length;
@@ -74,7 +75,7 @@ export default function PatientFeedback({ locale }: { locale: Locale }) {
               ))}
             </div>
             {count > 3 && (
-              <div className="mt-8 flex items-center justify-center gap-5">
+              <><div className="mt-8 flex items-center justify-center gap-5">
                 <button type="button" onClick={() => go(-1)} aria-label={hi ? "पिछली प्रतिक्रियाएँ" : "Previous reviews"} className="rounded-full border border-[#2B454B]/25 p-2.5 text-[#2B454B] transition hover:bg-[#E9EEE8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A65B]">
                   <ArrowLeft size={17} />
                 </button>
@@ -86,10 +87,9 @@ export default function PatientFeedback({ locale }: { locale: Locale }) {
                 <button type="button" onClick={() => go(1)} aria-label={hi ? "अगली प्रतिक्रियाएँ" : "Next reviews"} className="rounded-full border border-[#2B454B]/25 p-2.5 text-[#2B454B] transition hover:bg-[#E9EEE8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A65B]">
                   <ArrowRight size={17} />
                 </button>
-              </div>
-              <p className="mt-3 text-center text-[11px] text-[#7A8984]">
-                {hi ? "प्रतिक्रियाएँ हर 5 सेकंड में अपने आप बदलेंगी।" : "Reviews advance automatically every 5 seconds."}
-              </p>
+              </div><p className="mt-3 text-center text-[11px] text-[#7A8984]">
+                  {hi ? "प्रतिक्रियाएँ हर 5 सेकंड में अपने आप बदलेंगी।" : "Reviews advance automatically every 5 seconds."}
+                </p></>
             )}
           </>
         ) : (
