@@ -4,10 +4,15 @@ import { ArrowLeft, ArrowRight, Clock3, MapPin, MessageCircle, Stethoscope } fro
 import { clinic, whatsappLink } from "@/lib/clinic";
 import { localizedAlternates } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dr. Sachin Goyal | Aruna Skin Clinic, Khatima",
-  description: "Meet Dr. Sachin Goyal, MBBS, MD (DVL), dermatologist at Aruna Skin Clinic, Khatima, for skin, hair and nail consultations.",  alternates: localizedAlternates("/about"),
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (locale !== "en" && locale !== "hi") return {};
+  return {
+    title: "Dr. Sachin Goyal | Aruna Skin Clinic, Khatima",
+    description: "Meet Dr. Sachin Goyal, MBBS, MD (DVL), dermatologist at Aruna Skin Clinic, Khatima, for skin, hair and nail consultations.",
+    alternates: localizedAlternates(locale, "/about"),
+  };
+}
 
 const copy = {
   en: {

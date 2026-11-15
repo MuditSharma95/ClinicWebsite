@@ -5,10 +5,15 @@ import { treatments } from "@/lib/treatments";
 import { clinic, whatsappLink } from "@/lib/clinic";
 import { localizedAlternates } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dermatology Treatments | Aruna Skin Clinic, Khatima",
-  description: "Explore skin, hair, nail and dermatology consultations with Dr. Sachin Goyal at Aruna Skin Clinic, Khatima, Uttarakhand.",  alternates: localizedAlternates("/treatments"),
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (locale !== "en" && locale !== "hi") return {};
+  return {
+    title: "Dermatology Treatments | Aruna Skin Clinic, Khatima",
+    description: "Explore skin, hair, nail and dermatology consultations with Dr. Sachin Goyal at Aruna Skin Clinic, Khatima, Uttarakhand.",
+    alternates: localizedAlternates(locale, "/treatments"),
+  };
+}
 
 export default async function TreatmentsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;

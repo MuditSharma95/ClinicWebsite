@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: hi
       ? "अरुणा स्किन क्लिनिक, खटीमा में डॉ. सचिन गोयल से त्वचा, बाल और नाखूनों से संबंधित परामर्श लें।"
       : "Consult Dr. Sachin Goyal, MBBS, MD (DVL), for skin, hair and nail concerns at Aruna Skin Clinic, Khatima, Uttarakhand.",
-    alternates: localizedAlternates(""),
+    alternates: localizedAlternates(locale),
     openGraph: {
       title: hi ? "अरुणा स्किन क्लिनिक | खटीमा" : "Aruna Skin Clinic | Dermatologist in Khatima",
       description: hi ? "डॉ. सचिन गोयल से त्वचा, बाल और नाखूनों के लिए परामर्श।" : "Dermatology consultation with Dr. Sachin Goyal in Khatima.",

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${item.title[locale]} | Dr. Sachin Goyal | Aruna Skin Clinic`,
     description: item.summary[locale],
-    alternates: localizedAlternates(`/treatments/${slug}`)
+    alternates: localizedAlternates(locale, `/treatments/${slug}`)
   };
 }
 

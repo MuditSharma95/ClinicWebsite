@@ -3,9 +3,12 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:30
 export function absoluteUrl(path = "") {
   return new URL(path.startsWith("/") ? path : `/${path}`, `${siteUrl}/`).toString();
 }
-export function localizedAlternates(path = "") {
+export function localizedAlternates(
+  locale: string,
+  path = ""
+) {
   return {
-    canonical: absoluteUrl(`/en${path}`),
+    canonical: absoluteUrl(`/${locale}${path}`),
     languages: {
       en: absoluteUrl(`/en${path}`),
       hi: absoluteUrl(`/hi${path}`),
